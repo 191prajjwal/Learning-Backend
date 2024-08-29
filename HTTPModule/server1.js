@@ -10,7 +10,8 @@ const mimeTypes={
     ".js":"application/javascript",
     ".jpeg":"image/jpeg",
     ".jpg":"image/jpg",
-    ".png":"image/png" 
+    ".png":"image/png" ,
+    ".ico":"image/x-icon"//by default browser injects one favicon.ico if there is no favicon so written its mimeType to eliminate any error caused by it
 }
 const server=http.createServer((req,res)=>{
 
