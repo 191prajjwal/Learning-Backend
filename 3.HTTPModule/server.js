@@ -14,25 +14,30 @@ const image=fs.readFileSync("./public/image.jpg")
 const server=http.createServer((req,res)=>{
 
     if(req.url==="/")
-    {   res.writeHead(200,{"Content-Type":"text/html"})
+    {   
+        // res.writeHead(200,{"Content-Type":"text/html"})
         res.write(homepage)
         res.write("<p>This is Homepage</p>")
         res.end()
     }
-    else if(req.url==="/About")
-    {   res.writeHead(200,{"Content-Type":"text/html"})
+    else if(req.url==="/about")
+    {  
+        //  res.writeHead(200,{"Content-Type":"text/html"})
         res.end(about)
     }
     else if(req.url==="/contact")
-        {res.writeHead(200,{"Content-Type":"text/html"})
+        {
+            // res.writeHead(200,{"Content-Type":"text/html"})
             res.end(contact)
         }
         else if(req.url==="/style.css")
-            {res.writeHead(200,{"Content-Type":"text/css"})
+            {
+                // res.writeHead(200,{"Content-Type":"text/css"})
                 res.end(css)
             }
             else if(req.url==="/image.jpg")
-                {res.writeHead(200,{"Content-Type":"image/jpg"})
+                {
+                    // res.writeHead(200,{"Content-Type":"image/jpg"})
                     res.end(image)
                 }
     else{
@@ -42,8 +47,8 @@ const server=http.createServer((req,res)=>{
 
 })
 
-server.listen(4000,()=>{
-    console.log("Server is live at port 4000");
+server.listen(5000,()=>{
+    console.log("Server is live at port 5000");
     
 })
 
